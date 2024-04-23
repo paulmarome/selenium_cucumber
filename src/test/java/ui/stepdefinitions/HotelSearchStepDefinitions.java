@@ -26,7 +26,8 @@ public class HotelSearchStepDefinitions {
 
     @Given("I log in to the Adactin application with username {string} and password {string}")
     public void loginWithUsernameAndPassword(String username, String password) {
-        new LoginPage(webDriver).login(username, password);
+        LoginPage loginPage = new LoginPage(webDriver);
+        loginPage.login(username, password);
     }
 
     @And("I am on the Adactin {string} booking page")
